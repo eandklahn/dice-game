@@ -1,5 +1,7 @@
 import sys
 import os
+import ctypes
+
 from action_tab import ActionTab
 from stats_tab import StatisticsTab
 
@@ -60,7 +62,11 @@ class DiceGame(QMainWindow):
             self.fair_lbl.setStyleSheet('background-color: red')
             
 if __name__ == '__main__':
-
+    
+    if os.name=='nt':
+        myappid = 'DiceGame'
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+    
     app = QApplication(sys.argv)
     GUI = DiceGame()
     sys.exit(app.exec_())

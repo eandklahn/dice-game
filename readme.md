@@ -1,3 +1,3 @@
 
 
-The dice icon was made by (http://robinweatherall.co.uk)
+I'm using a dice icon made by [Robin Weatherall](http://robinweatherall.co.uk)

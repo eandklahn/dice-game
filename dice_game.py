@@ -1,4 +1,5 @@
 import sys
+import os
 from action_tab import ActionTab
 from stats_tab import StatisticsTab
 
@@ -17,7 +18,8 @@ class DiceGame(QMainWindow):
     def initUI(self):
         
         self.setWindowTitle('Roll the dice...')
-        self.setWindowIcon(QIcon(r'images\Robinweatherall-Cashino-Dice.ico'))
+        if os.path.isfile(r'images\dice.ico'):
+            self.setWindowIcon(QIcon(r'images\dice.ico'))
         
         self.main_widget = QWidget()
         self.setCentralWidget(self.main_widget)
